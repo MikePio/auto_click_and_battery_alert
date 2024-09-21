@@ -13,7 +13,7 @@ def check_battery():
         percent = battery.percent
         plugged = battery.power_plugged
         
-        if percent < 50 and not plugged:
+        if percent < 51 and not plugged:
             notification.notify(
                 title="Batteria Scarica",
                 message=f"La batteria è al {percent}%. Collega il caricatore!",
@@ -35,7 +35,7 @@ def check_battery():
             )
         
 
-        if percent < 50 and not plugged:
+        if percent < 51 and not plugged:
             time.sleep(600)  # Controlla ogni 600 secondi
         # if percent > 97 and plugged:
         #     time.sleep(1200) # Controlla ogni 1200 secondi
